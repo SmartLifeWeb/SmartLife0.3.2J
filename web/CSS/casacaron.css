@@ -1,0 +1,109 @@
+.paginas{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+}
+.mod{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+
+}
+.contenedor{
+	width: 100%;
+	height: 100%;
+	position:100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.laterali{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 20%;
+	height: 40%;
+	cursor : url(imagenescss/izquierda.png), pointer;
+
+
+}
+.laterald{
+	position: absolute;
+	top: 0%;
+	left: 75%;
+	width: 20%;
+	height: 40%;
+	cursor : url(imagenescss/derecha.png) , pointer;
+	
+
+
+
+}
+.botonmenu{
+	position: fixed;
+	width: 10%;
+	height: 15%;
+	top: 0%;
+	left: 0%;
+
+
+     
+}
+.botonmenu1{
+	position: absolute;
+	width: 10%;
+	height: 15%;
+	top: 0%;
+	left: 0%;
+
+
+
+     
+}
+.menu{
+		width: 0%;
+		height: 0%;
+		position: fixed;
+		top: 0%;
+		left: 0%;
+		background: rgba(0,0,0,.9);
+
+		
+
+
+
+	}
+.contenidomenu{
+		width: 100%;
+		height: 100%;
+		visibility: hidden;
+
+	}
+	.imgmenu{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+
+	}
+	.imgmenum{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		opacity: 0;
+
+	}
+	p{
+		position: relative;
+		top: 10%;
+		left: 20%;
+		font-size: 30px;
+		color: white;
+	}

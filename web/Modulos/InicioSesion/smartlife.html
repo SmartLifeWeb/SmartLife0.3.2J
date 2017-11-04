@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html style="height: 100%; margin: 0px;">
+    <head>
+        <title>Pagina R-I-A</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../CSS/SmartLife.css">
+        <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+        <script>
+    	var opacidad=1;
+    	var opacidad2=0;
+   		var img1= document.getElementById('imagen1');
+    	var img2= document.getElementById('imagen2');
+
+    function cierraventana() {
+    	document.getElementById('contenedors').style.visibility="hidden";
+    }
+   var v1=true;
+   var v2=false;
+
+    function cambiarimagenes() {
+  var numran1= Math.floor((Math.random() * 4) + 1);
+    var numran2= Math.floor((Math.random() * 4) + 1);
+		if (v1) {
+    	opacidad=opacidad-.01;
+    	opacidad2=opacidad2+.01
+    
+    }	if (opacidad<0 && opacidad2>1) {
+    		v1=false;
+    		document.getElementById('imagen1').src="../../imagenes/fondo"+numran1+".jpg";
+
+    	}
+   		if (!v1) {
+   			opacidad=opacidad+.01;
+    	opacidad2=opacidad2-.01
+    	
+   		}if (opacidad>1 && opacidad2<0) {
+    		v1=true;
+    		 document.getElementById('imagen2').src="../../imagenes/fondo"+numran2+".jpg";
+
+    	}
+    	
+    		
+    		document.getElementById('contenedor1').style.opacity=opacidad;
+
+    
+    		
+    		
+    		 document.getElementById('contenedor2').style.opacity=opacidad2;
+ }
+
+ var top1=0
+ var left=0;
+ //var d = document.getElementById("circulo");
+var veri=true;
+var veri2=true;
+var colores = ["", "#D5F3F3", "#48C9B0", "#010F0F","#F3F7F7","#ECDCAB","#A79ECC"];
+
+ 
+
+ function movercirculo() {
+//var topPos = d.offsetTop;
+
+if (top1>70  ) {
+	veri=false;
+	var numran3= Math.floor((Math.random() * 6) + 1);
+	document.getElementById('circulo').style.background=colores[numran3];
+	
+}
+if (left>83.4) {
+	veri2=false;
+	var numran3= Math.floor((Math.random() * 6) + 1);
+	document.getElementById('circulo').style.background=colores[numran3];
+
+}
+if (top1<0  ) {
+	veri=true;
+	var numran3= Math.floor((Math.random() * 6) + 1);
+	document.getElementById('circulo').style.background=colores[numran3];
+
+	
+}
+if (left<0) {
+	veri2=true;
+	var numran3= Math.floor((Math.random() * 6) + 1);
+	document.getElementById('circulo').style.background=colores[numran3];
+
+}
+if (veri) {
+ 	top1=top1+0.20;
+ 	
+ }
+ else
+ {
+ 	top1=top1-0.20;
+ 	
+
+ }
+ if (veri2) {
+ 	
+ 	left=left+0.20;
+ }
+ else
+ {
+ 	
+ 	left=left-0.20;
+
+ }
+
+ 	document.getElementById('circulo').style.top=top1+"%";
+ 	document.getElementById('circulo').style.left=left+"%";
+
+ }
+
+   
+
+    setInterval("cambiarimagenes()",100);
+    setInterval("movercirculo()",50);
+  
+
+
+ </script>
+
+    </head>
+    
+    <body style="margin: 0px;">
+    	
+   <div class="contenedor" id="contenedor1">
+
+       <img src="../../imagenes/fondo1.jpg" class="fondo" id="imagen1">
+	</div>
+	 <div class="contenedor" id="contenedor2">
+
+             <img src="../../imagenes/fondo2.jpg" class="fondo" id="imagen2">
+	</div>
+
+
+	<div class="cuerpo">
+    <div class="slogan"> Hazlo Bien, <br>Hazlo  <strong class="resalto">Inteligente. </strong> </div>
+    
+		<div class="circulo" id="circulo"></div>
+			<div class="circulo1" id="circulo"></div>
+		<div class="cabezera">
+			
+                    <div class="logo"> <img class="ellog" src="../../imagenes/logotrans.png" alt=""></div>
+			<div class="menu">
+                            <div class="item item1"><p><a href=Ingresar.html>Iniciar sesion </a></p> </div>
+                     
+                            <div class="item item1"><p><a href=Registrarte.html>¡Registrate!</a></p> </div>                 
+
+			</div>
+
+
+		</div>
+	</div>
+
+		
+
+
+
+
+
+
+
+
+
+        
+    </body>
+</html>

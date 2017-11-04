@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Inicio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../../CSS/EstilosIngresar.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates|Overpass|Raleway" rel="stylesheet">
+        <script>
+            function Agrandar() {
+                document.getElementById('H').style.width= "5.3%";
+                document.getElementById("H").src = "Imagenes/user1.png";
+            }
+            function Regresa(){
+                document.getElementById('H').style.width= "5%";
+                document.getElementById("H").src = "Imagenes/user.png";
+            }
+        </script>
+    </head>
+	    <body>
+	    	<div class="general">
+	    		<div class="contenido">
+	    			<p class="Titulo"> ¡Ingresar!</p>
+                    <hr>
+                    <br>
+                    <br>
+                    <form action="/SmartLife0.1-master/ServletInicio" method="POST">
+                        <input class="text" type="text" placeholder="Nombre de usuario" name="user">
+                        <br><br><br>
+                        <input class="text" type="password" placeholder="Contraseña" name="contra">
+                        <br><br><br>
+                        <input type="submit" value="Ingresar" class="enviar" onmouseover="Agrandar();" onmouseout="Regresa();">
+                    </form>
+
+                    <br>
+                    
+                    <p class="Texto">¿Aún no estás registrado? <a id="Registrate" href="Registrarte.html">¡Regístrate aquí!</a></p>
+	    		</div>
+              
+                    <!--<img src="user.png" id="H">-->
+                    
+	    	</div>
+
+	    </body>
+    </html>

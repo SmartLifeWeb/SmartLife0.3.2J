@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../../CSS/EstilosRegistrarte.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates|Overpass|Raleway" rel="stylesheet">
+        <script src=""></script>
+    </head>
+        <body>
+            <div class="general">
+                <div class="contenido">
+                    <p> ¡Únete a nosotros!</p>
+                    <hr>
+                    <br>
+                    <form action="/SmartLife0.1-master/ServletRegistro" method="Get">
+                        <input class="text" type="text" placeholder="Nombre" name="nombre"  onkeypress="return Letras(event);" required/>
+                        <br><br>
+                        <input class="text" type="text" placeholder="Apellido paterno" name="a_paterno"  onkeypress="return Letras(event);" required/>
+                        <br><br>
+                        <input class="text" type="text" placeholder="Apellido Materno" name="a_materno"  onkeypress="return Letras(event);" required/>
+                        <br><br>
+                        <input class="text" type="text" placeholder="Usuario" name="user"   required/>
+                        <br><br>
+                        <input class="text" type="text" placeholder="Correo Electronico" name="correo"   required/>
+                        <br><br>
+                        <input class="text" type="text" placeholder="Telefono" name="telefono"  onkeypress="return Numeros(event);" required/>
+                        <br><br>
+                        <input class="text" type="password" id="Contra" placeholder="Contraseña" name="contrasena" maxlength="8" onkeypress="return Letras(event);" required/>
+                        <br><br>
+                        <input class="text" type="password" id="Confirmar" placeholder="Confirmar contraseña" maxlength="8" onkeypress="return Letras2(event);" required/>
+                        <br><br>
+                        <select name="rol" id="rol" onchange="Revisa()" >
+                            <option>Rol</option>
+                            <option value="1">Profesionista</option>
+                            <option value="2">Estudiante</option>
+                        </select><br><br>
+                         
+                        <br>
+
+                        <input type="submit"  class="Registrar" name="registra"> 
+                    </form>
+                    <div>
+                    <br>
+                    <br>
+                    <p class="befound">Al registrarte, aceptas las <a href="google.com" class="legal-link">Condiciones de Servicio y la Politicas de Privacidad</a>.</p>
+                     </div>
+
+                    
+                </div>
+            </div>
+
+        </body>
+    </html>

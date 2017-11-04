@@ -1,0 +1,82 @@
+.contenedor{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+
+
+
+}
+
+.principal{
+	width: 100%;
+	height: 100%;
+	border: 1px solid;
+
+
+}
+.cuerpo{
+	width: 100%;
+	height: 150%;
+	border: 1px solid;
+
+}
+.contenedora{
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+	top: 0%;
+	left: 0%;
+
+}
+.contenedorb{
+width: 100%;
+	height: 100%;
+		position: absolute;
+	top: 0%;
+	left: 0%;
+}
+.fondo{
+	width: 100%;
+	height: 100%;
+}
+.nombremodulo{
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	top:25%;
+	left: 0%;
+	background: rgba(255, 255, 255,.4);
+	font-size: 30px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+
+	
+}
+.laterali{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 20%;
+	height: 100%;
+	cursor : url(imagenescss/izquierda.png), pointer;
+
+
+}
+.laterald{
+	position: absolute;
+	top: 0%;
+	left: 80%;
+	width: 20%;
+	height: 100%;
+	cursor : url(imagenescss/derecha.png) , pointer;
+	
+
+
+
+}

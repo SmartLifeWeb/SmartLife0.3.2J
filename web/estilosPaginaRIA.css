@@ -1,0 +1,186 @@
+html{
+	height: 100%;
+}
+body{  
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+.fondo{
+
+width: 100%;
+height: 100%;
+
+}
+
+
+
+.cabezera{
+
+	width:100%;
+	height: 100%;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-start;
+	padding-top: 25px;
+	position: absolute;
+
+}
+.logo{
+
+	
+	
+
+
+	
+	
+
+
+
+
+
+}
+.menu{
+
+	
+	width: 60%;
+	height: 120px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	margin-right: 20px;
+
+
+}
+.item{
+	
+	width: 30%;
+	height: 50px;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-end;
+
+	
+	border-radius: 10px;
+	font-family: 'Encode Sans Expanded', sans-serif;
+	font-size: 20px;
+	color:#123C56;
+
+
+    
+}
+.slogan{
+	position: absolute;
+	width: 75%;
+	font-size: 5em;
+	height: 45%;
+	top: 35%;
+	left: 12.5%;
+
+	font-family: 'Archivo Black', sans-serif;
+	color: white;
+	text-align: center;
+
+
+}
+
+.seleccion{
+	width: 70%;
+	height: 70%;
+	border: 1px solid;
+	background-size: cover;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-end;
+
+
+
+}
+.selecitem{
+	width: 30%;
+	height: 20%;
+	border: 1px solid;
+	margin-bottom: 10%;
+
+
+}
+.seleclogo{
+	position: fixed;
+	width: 30%;
+	height: 10%;
+	left: 35%;
+	border: 1px solid;
+	top: 35%;
+
+}
+.contenedorseleccion{
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 5, 6,.8);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	
+	align-items: center;
+
+}
+
+.contenedor{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+}
+.circulo{
+	height: 30%;
+	width: 16.6%;
+	position: absolute;
+	
+	border-radius: 100%;
+	background:#D5F3F3;
+	opacity: .5;
+
+
+
+
+}
+.circulo{
+	height: 30%;
+	width: 16.6%;
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	
+	border-radius: 100%;
+	background:#D5F3F3;
+	opacity: .5;
+
+
+
+
+}
+.cuerpo{
+	height: 100%;
+	width: 100%;
+}
+.resalto{
+	
+	color: #2399A4;
+
+
+}

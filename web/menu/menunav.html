@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" style="margin: 0px; height: 100%;">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+        <script>
+var opacidad1 = 1;
+var opacidad2 = 0;
+var opacidadr1 = 0;
+var opacidadr2 = 1;
+var inter;
+var inter2;
+var interdesp;
+var opacidad11 = 1;
+var opacidad21 = 0;
+var opacidadr11 = 0;
+var opacidadr21 = 1;
+var inter1;
+var inter12;
+var interdesp;
+var interdesp1;
+
+
+var ancho=0;
+var alto=0;
+var ancho1=100;
+var alto1=100;
+
+
+	function cambiarimglogo(){
+opacidad1 = 1;
+		opacidad2 = 0;
+		clearInterval(inter2);
+ 
+		inter= setInterval("difuminado()",100);
+	}
+	function regresar(){
+		
+opacidadr1 = 0;
+ opacidadr2 = 1;
+ 		clearInterval(inter);
+		inter2=setInterval("difuminador()",100);
+	}
+	function difuminado() {
+		
+		
+		
+
+		if (opacidad1>0) {
+		opacidad1=opacidad1-.1;
+document.getElementById('slogo').style.opacity=opacidad1;
+	}
+	if (opacidad2<1) {
+		opacidad2=opacidad2+.1;
+document.getElementById('mlogo').style.opacity=opacidad2;
+	}
+	
+	
+
+	}
+function difuminador() {
+		
+	
+		
+
+		if (opacidadr1<1) {
+		opacidadr1=opacidadr1+.1;
+document.getElementById('slogo').style.opacity=opacidadr1;
+	}
+	if (opacidadr2>0) {
+		opacidadr2=opacidadr2-.1;
+document.getElementById('mlogo').style.opacity=opacidadr2;
+	}
+}
+	function cambiarimglogo1(){
+opacidad11 = 1;
+		opacidad21 = 0;
+		clearInterval(inter12);
+ 
+		inter1= setInterval("difuminado1()",100);
+	}
+	function regresar1(){
+		
+opacidadr11 = 0;
+ opacidadr21 = 1;
+ 		clearInterval(inter1);
+		inter12=setInterval("difuminador1()",100);
+	}
+	function difuminado1() {
+		
+		
+		
+
+		if (opacidad11>0) {
+		opacidad11=opacidad11-.1;
+document.getElementById('s1logo').style.opacity=opacidad11;
+	}
+	if (opacidad21<1) {
+		opacidad21=opacidad21+.1;
+document.getElementById('m1logo').style.opacity=opacidad21;
+	}
+	
+	
+
+	}
+function difuminador1() {
+		
+	
+		
+
+		if (opacidadr11<1) {
+		opacidadr11=opacidadr11+.1;
+document.getElementById('s1logo').style.opacity=opacidadr11;
+	}
+	if (opacidadr21>0) {
+		opacidadr21=opacidadr21-.1;
+document.getElementById('m1logo').style.opacity=opacidadr21;
+	}
+	
+	
+
+	}
+	function despliega() {
+				ancho1=100;
+alto1=100;
+opacidaddesp1=1;
+clearInterval(interdesp1);
+		interdesp= setInterval("eldespliegue()",10);
+	}
+	var opacidaddesp=0;
+	function eldespliegue() {
+
+
+		if (opacidaddesp<1) {
+			opacidaddesp=opacidaddesp+.01;
+			document.getElementById('menu1').style.opacity=opacidaddesp;
+
+
+		}
+
+		if (ancho<100) {
+			ancho=ancho+1;
+			document.getElementById('menu1').style.width=ancho+"%";
+		}
+		if (alto<100) {
+			alto=alto+1;
+		document.getElementById('menu1').style.height=alto+"%";
+
+
+		}
+
+		
+
+	}
+	function despliega1() {
+		ancho=0;
+alto=0;
+opacidaddesp=0;
+clearInterval(interdesp);
+		interdesp1= setInterval("eldespliegue1()",10);
+	}
+	var opacidaddesp1=1;
+	function eldespliegue1() {
+
+
+		if (opacidaddesp1>0) {
+			opacidaddesp1=opacidaddesp1-.01;
+			document.getElementById('menu1').style.opacity=opacidaddesp1;
+
+
+		}
+
+		if (ancho1>100) {
+			ancho1=ancho1-1;
+			document.getElementById('menu1').style.width=ancho1+"%";
+		}
+		if (alto1>100) {
+			alto1=alto1-1;
+		document.getElementById('menu1').style.height=alto1+"%";
+
+
+		}
+
+		
+
+	}
+
+</script>
+<style>
+.botonmenu{
+	position: fixed;
+	width: 10%;
+	height: 15%;
+	top: 0%;
+	left: 0%;
+
+
+     
+}
+.botonmenu1{
+	position: absolute;
+	width: 10%;
+	height: 15%;
+	top: 0%;
+	left: 0%;
+	
+
+
+     
+}
+.menu{
+		width: 0%;
+		height: 0%;
+		position: fixed;
+		top: 0%;
+		left: 0%;
+		background: rgba(0,0,0,.9);
+
+		
+
+
+
+	}
+.contenidomenu{
+		width: 100%;
+		height: 100%;
+
+	}
+	.imgmenu{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+
+	}
+	.imgmenum{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		opacity: 0;
+
+	}
+</style>
+</head>
+
+
+<body style="margin: 0px; height: 100%;">
+
+<div class="botonmenu" onmouseover="cambiarimglogo()" onmouseout="regresar()" onclick="despliega()"><img class="imgmenu" id="slogo" src="smartlifelogo.png" alt="">
+<img class="imgmenum" id="mlogo" src="menu.png" alt="">
+</div>
+
+<div class="menu" id="menu1">
+ <div class="botonmenu1" onmouseover="cambiarimglogo1()" onmouseout="regresar1()" onclick="despliega1()"><img class="imgmenu" id="s1logo" src="logoblanco.png" alt="">
+<img class="imgmenum" id="m1logo" src="menu.png" alt="">  </div>
+<div class="contenidomenu">
+	
+</div>
+	
+</div>
+	
+</body>
+</html>

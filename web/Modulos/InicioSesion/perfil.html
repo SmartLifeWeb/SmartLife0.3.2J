@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../../CSS/EstilosRegistrarte.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates|Overpass|Raleway" rel="stylesheet">
+        <script src=""></script>
+    </head>
+        <body>
+            <div class="general">
+                <div class="contenido">
+                    <h1 align="center"> ¡Modifica tus datos!</h1>
+                    <br>
+                    <hr>
+                    <br>
+                    <h2 align="center">Introduce tu contraseña para autorizar los cambios</h2>
+                    <form action="/ServletRegistro" method="GET">
+                        <input class="text" type="password" id="Contra" placeholder="Contraseña" name="contrasena" maxlength="8" onkeypress="return Letras(event);" required/>
+                        <br><br>
+                        <input type="submit" value="Confirmar contraseña" name="registra">
+                    </form>
+                    <form>
+                        <input class="text" type="text" placeholder="Nombre" name="nombre"  onkeypress="return Letras(event);" required/>
+                        <br><br>
+                        <input class="text" type="text" placeholder="Apellido paterno" name="a_paterno"  onkeypress="return Letras(event);" required/>
+                        <br><br>
+                        <input class="text" type="text" placeholder="Apellido Materno" name="a_materno"  onkeypress="return Letras(event);" required/>
+                        <br><br>
+                        <input class="text" type="text" placeholder="Usuario" name="user"   required/>
+                        <br><br>
+                        <input class="text" type="text" placeholder="Correo Electronico" name="correo"   required/>
+                        <br><br>
+                        <input class="text" type="text" placeholder="Telefono" name="telefono"  onkeypress="return Numeros(event);" required/>
+                        <br><br>
+
+                        <input class="text" type="password" id="Confirmar" placeholder="Nueva Contraseña" maxlength="8" onkeypress="return Letras2(event);" required/>
+                        <br><br>
+                        <select name="rol" id="rol" onchange="Revisa()" >
+                            <option>Rol</option>
+                            <option value="1">Profesionista</option>
+                            <option value="2">Estudiante</option>
+                        </select><br><br>
+                         
+                        <br>
+
+                        <input type="submit" value="Aceptar" name="registra">
+                    </form>
+                    <div>
+                    <br>
+                    <br>
+                    
+                     </div>
+
+                    
+                </div>
+            </div>
+
+        </body>
+    </html>
