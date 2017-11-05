@@ -58,3 +58,9 @@ if (op<1) {
 }
  
     setInterval("aparecer1()",.1);
+    
+    
+    function mostraractividad(){
+    alert("hola");
+        //document.getElementById(attr('id')).style.visibility="visible";
+    }

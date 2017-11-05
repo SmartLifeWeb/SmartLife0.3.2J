@@ -81,3 +81,25 @@ background: rgba(255, 255, 255,.4);
 
 
 }
+.actividades{
+   display: flex;
+   width: 80%;
+   height: 10%;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+     visibility: hidden;
+}
+.itema{
+    width: 15%;
+    height: 50%;
+    background: rgba(209, 242, 235,.5);
+   
+    
+}
+.principalact{
+    width:10%;
+    height:10%;
+    background: black;
+    color: white;
+}

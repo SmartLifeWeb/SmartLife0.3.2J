@@ -19,6 +19,36 @@
         <link rel="stylesheet"  type="text/css" href="../../CSS/agenda.css">
         <script type="text/javascript" src="../../script/agenda.js"></script>
     </head>
+    <script>
+        var veri=true;
+        var ver=0;
+         function mostraractividad(atr){
+             
+             if (veri && ver===atr){
+                 document.getElementById("contact"+atr).style.visibility="visible";
+                 veri=false;
+             }
+               else{
+                   
+                 document.getElementById("contact"+atr).style.visibility="hidden";
+                 veri=true;
+             }
+                if (!veri && ver===atr){
+                 document.getElementById("contact"+atr).style.visibility="hidden";
+                 veri=false;
+             }
+               else{
+                   
+                 document.getElementById("contact"+atr).style.visibility="visible";
+                 veri=true;
+             }
+             
+             ver=atr;
+             
+  
+       
+    }
+    </script>
     <body style="height: 100%; margin: 0px;">
 
 
@@ -99,36 +129,37 @@
             catch(SQLException error){
                 
                 out.println(error.toString());
-            }
+            }int contador=0;
             
             try{
             String nombrebusqueda="javier"; //cambiar al usuario una ves hecha las sesiones
             r=sta.executeQuery("SELECT * FROM actividad where idUsuario='"+nombrebusqueda+"';");
             
             
-            out.println("<table border= 1><tr><td>Actividad</td><td>Tipo</td><td>Inicio</td><td>Termino</td><td>Descripcion</td><td>Prioridad</td>");
             
             while(r.next()){
-                
+                contador=contador+1;
                 String actividad = r.getString("NombreAct");
                 String tipo = r.getString("IdTipoAct");
                 String Fechaini = r.getString("FechaIni");
-                Integer Fechafin = r.getInt("FechaFin");
+                String Fechafin = r.getString("FechaFin");
                 String Descripcion = r.getString("Descripción");
                 String prioridad = r.getString("Prioridad");
-
+                
+                out.println("<div class='principalact' onclick='mostraractividad(this.id)' id='"+contador+"'>"+actividad+"</div>");
+                 out.println("<div class='actividades' id='contact"+contador+"'>");
                  
-                 out.println("<tr><td>"+actividad+"</td>");
-                 out.println("<td>"+tipo+"</td>");
-                 out.println("<td>"+Fechaini+"</td>");
-                 out.println("<td>"+Fechafin+"</td>");
-                 out.println("<td>"+Descripcion+"</td>");
-                 out.println("<td>"+prioridad+"</td>"); 
+                 out.println("<div class='itema'>"+actividad+"</div>");
+                 out.println("<div class='itema'>"+tipo+"</div>");
+                 out.println("<div class='itema'>"+Fechaini+"</div>");
+                 out.println("<div class='itema'>"+Fechafin+"</div>");
+                 out.println("<div class='itema'>"+Descripcion+"</div>");
+                 out.println("<div class='itema'>"+prioridad+"</div>"); 
 
-                 out.println("</tr>");
+                  out.println("</div>");
                  
                  }
-             out.println("</table>");
+            
             
             
             
