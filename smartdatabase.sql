@@ -9,7 +9,7 @@ create table avatares(idAvatar int auto_increment primary key not null,Nombre nv
 create table roles(idROl int auto_increment primary key not null ,Rol nvarchar(20));
 
 #Tabla del usuario
-create table usuario(idUsuario nvarchar(30) primary key not null,idAvatar int(11), foreign key(idAvatar) references avatares(idAvatar),
+create table usuario(idUsuario nvarchar(30) primary key,idAvatar int(11), foreign key(idAvatar) references avatares(idAvatar),
 idROl int(11), foreign key(idROl) references roles(idROl), Nombre nvarchar(40), A_paterno nvarchar(20), A_Materno nvarchar(20),
 Telefono bigint(11), email nvarchar(70), contraseña nvarchar(100), likes int(10));
 
@@ -87,7 +87,29 @@ select * from entretenimiento;
 
 insert into RelUserEntreten values(default,'Ño',2);
 select*from RelUserEntreten;
+describe usuario;
 select * from usuario;
 
 select idUsuario,Género,Título,Artista from ((RelUserEntreten inner join entretenimiento on RelUserEntreten.idEntreten = entretenimiento.idEntreten) 
 inner join géneros on entretenimiento.idGénero = géneros.idGénero) inner join artistasbandas on entretenimiento.idArtistaB = artistasbandas.idArtistaB where idUsuario='Ño'; create table preguntas(idPregunta int auto_increment primary key not null, idUsuario nvarchar(30), Descripción nvarchar(200), foreign key(idUsuario) references usuario(idUsuario))
+delimiter ;
+drop procedure if exists registrarusuario;
+delimiter **
+create procedure registrarusuario(
+in usuario nvarchar(30), in idAvatar int(11), in idRol int(11), in Nombre nvarchar(40), 
+in apat nvarchar(20), in amat nvarchar(20), in tel bigint(11), in correo nvarchar(70), 
+in pass nvarchar(100), in likes int(10))
+
+BEGIN
+if(exists(select idUsuario from usuario where idUsuario=usuario)) then
+		select 'Este nombre de usuario ya existe' as 'Error';
+    else
+		insert into usuario (idUsuario,idAvatar,idROl,Nombre,A_paterno,A_materno,Telefono,email,contraseña,likes)
+		values(usuario,idAvatar,idRol,Nombre,apat,amat,tel,correo,pass,likes);
+    end if;
+END;
+**
+delimiter ;
+
+call registrarusuario('po',1,1,'pepe','ganga','gangax2',4234324,'gmail','123',0);
+
