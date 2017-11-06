@@ -16,7 +16,7 @@
     <head>
         <meta charset="UTF-8">
         <title> Agenda</title>
-        <link rel="stylesheet"  type="text/css" href="../../CSS/agenda.css">
+        
         <script type="text/javascript" src="../../script/agenda.js"></script>
     </head>
     <script>
@@ -24,31 +24,141 @@
         var ver=0;
          function mostraractividad(atr){
              
-             if (veri && ver===atr){
+           
                  document.getElementById("contact"+atr).style.visibility="visible";
-                 veri=false;
-             }
-               else{
-                   
-                 document.getElementById("contact"+atr).style.visibility="hidden";
-                 veri=true;
-             }
-                if (!veri && ver===atr){
-                 document.getElementById("contact"+atr).style.visibility="hidden";
-                 veri=false;
-             }
-               else{
-                   
-                 document.getElementById("contact"+atr).style.visibility="visible";
-                 veri=true;
-             }
-             
-             ver=atr;
+               
+            
              
   
        
     }
     </script>
+    <style>
+        .contenedor{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+
+
+
+}
+
+.principal{
+	width: 100%;
+	height: 100%;
+	border: 1px solid;
+
+
+}
+.cuerpo{
+	width: 100%;
+	height: 700px;
+	border: 1px solid;
+
+}
+.contenedora{
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+	top: 0%;
+	left: 0%;
+
+}
+.contenedorb{
+width: 100%;
+	height: 100%;
+		position: absolute;
+	top: 0%;
+	left: 0%;
+}
+.fondo{
+	width: 100%;
+	height: 100%;
+}
+.nombremodulo{
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	top:25%;
+	left: 0%;
+	
+	font-size: 30px;
+background: rgba(255, 255, 255,.4);
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	
+}
+.laterali{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 20%;
+	height: 100%;
+	cursor : url(imagenescss/izquierda.png), pointer;
+
+
+}
+.laterald{
+	position: absolute;
+	top: 0%;
+	left: 80%;
+	width: 20%;
+	height: 100%;
+	cursor : url(imagenescss/derecha.png) , pointer;
+	
+
+
+
+}
+.actividades{
+   display: flex;
+   width: 100%;
+   height: 100%;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+     visibility: hidden;
+     position: fixed;
+     top: 0%;
+     left:0%;
+     background: rgba(0,0,0,.7);
+     
+}
+.itema{
+    width: 15%;
+    height: 20%;
+ 
+   
+    
+}
+.principalact{
+    width:150px;
+    height:70%;
+    background: black;
+    color: white;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    
+}
+.contenedormenu{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+}
+    </style>
+    
     <body style="height: 100%; margin: 0px;">
 
 
@@ -108,6 +218,8 @@
 
 
             </form>
+                <br>
+                <br>
 
 
        
@@ -130,7 +242,7 @@
                 
                 out.println(error.toString());
             }int contador=0;
-            
+             out.println("<div class='contenedormenu'>");
             try{
             String nombrebusqueda="javier"; //cambiar al usuario una ves hecha las sesiones
             r=sta.executeQuery("SELECT * FROM actividad where idUsuario='"+nombrebusqueda+"';");
@@ -160,7 +272,7 @@
                  
                  }
             
-            
+             out.println("</div>");
             
             
             
